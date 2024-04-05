@@ -4,4 +4,4 @@ TARGET := zedboard
 SOURCES := ${current_dir}/top.v
 XDC := ${current_dir}/top.xdc
 
-include ${current_dir}/../../common.mk
+include ${current_dir}/../common/common.mk
