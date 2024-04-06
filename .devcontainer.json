@@ -5,5 +5,7 @@
         "vscode": {
           "extensions": ["teros-technology.teroshdl"]
         }
-      }
+      },
+
+    "runArgs": ["--privileged"]
 }
