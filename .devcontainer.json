@@ -3,9 +3,14 @@
 
     "customizations": {
         "vscode": {
-          "extensions": ["teros-technology.teroshdl"]
+          "extensions": ["teros-technology.teroshdl",
+            "ms-vscode.cpptools",
+            "ms-vscode.makefile-tools"]
         }
       },
 
-    "runArgs": ["--privileged"]
+    "runArgs": ["--privileged"],
+
+    "mounts": ["type=bind,source=/dev/bus/usb,target=/dev/bus/usb"]
+
 }
