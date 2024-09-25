@@ -3,7 +3,7 @@
 
     "customizations": {
         "vscode": {
-          "extensions": ["teros-technology.teroshdl",
+          "extensions": ["eirikpre.systemverilog",
             "ms-vscode.cpptools",
             "ms-vscode.makefile-tools"]
         }
