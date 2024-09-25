@@ -33,3 +33,27 @@ source "$F4PGA_INSTALL_DIR/$FPGA_FAM/conda/etc/profile.d/conda.sh"
 
 conda activate xc7
 ```
+
+## PS example
+Blink the LD9 LED which is connected to the PS.
+
+Build the binary:
+```Bash
+cd ps
+make
+```
+
+Upload the binary to the board:
+```Bash
+make openocd # Connects to the board and starts GDB server
+# In separate terminal:
+make debug
+# Press ENTER once to upload binary
+# Press ENTER a second time to start the execution
+# After that the GDB session can be used for debugging (set breakpoints etc.) 
+```
+
+### Credits:
+- Blink example: [3ap/zybo-z7-baremetal](https://github.com/3ap/zybo-z7-baremetal)
+- `bsp/boot.S` & `bsp/Zynq.ld` from [bigbrett/zybo-baremetal](https://github.com/bigbrett/zybo-baremetal)
+- `bsp/ps7_init_gpl.{c,h}` & `bsp/ps7_spl_init.c` from [Das U-boot](http://git.denx.de/?p=u-boot.git;a=summary)
